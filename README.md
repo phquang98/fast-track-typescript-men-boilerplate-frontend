@@ -41,6 +41,7 @@ TODO:
   - add this to body ele `style="font-family: 'Roboto', sans-serif;"`
 - set `core.autocrlf true` as when commit, files will have LF but when in your machine will be CRLF
 - settings for import resolver must use all file format, including .js, .ts and .tsx
+- if use Typography, if has `component="h2"` -> DOM tree will be rendered with that as a h2 ele
 
 ## Links
 
