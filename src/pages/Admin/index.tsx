@@ -1,13 +1,33 @@
-import React, { Component } from "react";
+import React, { FC } from "react";
+import GoogleLogin, { GoogleLoginResponse, GoogleLoginResponseOffline } from "react-google-login";
 
-class Home extends Component {
-  render() {
-    return (
-      <div>
-        <h2>This is admin page</h2>
-      </div>
-    );
-  }
+import { responseFromGoogleType } from "../../types/personalType";
+
+// Type guard for response from Google
+function isGoogleLoginResponse(res: GoogleLoginResponse | GoogleLoginResponseOffline): res is GoogleLoginResponse {
+  return (res as GoogleLoginResponse) !== undefined;
 }
 
-export default Home;
+const responseGoogle: responseFromGoogleType = async (response: GoogleLoginResponse | GoogleLoginResponseOffline) => {
+  // console.log(response);
+  if (isGoogleLoginResponse(response)) {
+    console.log(response.tokenId);
+  }
+};
+
+const AdminPage: FC<void> = () => {
+  return (
+    <div>
+      <h2>This is admin page</h2>
+      <GoogleLogin
+        clientId="903071779533-b9om8er3acdvuh5kea67qa264vc915ut.apps.googleusercontent.com"
+        buttonText="Login with Google"
+        onSuccess={responseGoogle}
+        onFailure={responseGoogle}
+        cookiePolicy={"single_host_origin"}
+      />
+    </div>
+  );
+};
+
+export default AdminPage;

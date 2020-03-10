@@ -21,7 +21,7 @@ const useStyles = makeStyles({
   }
 });
 
-const ProductCard: FC<ProductType> = ({ id, name, description, categories, variants, size }: ProductType) => {
+const ProductCard: FC<ProductType> = ({ _id, name, description, categories, variants, size }: ProductType) => {
   const classes = useStyles();
 
   return (
@@ -29,7 +29,7 @@ const ProductCard: FC<ProductType> = ({ id, name, description, categories, varia
       <Card className={classes.root}>
         <CardContent>
           <Typography className={classes.title} color="textSecondary" gutterBottom>
-            ID Number: {id}
+            ID Number: {_id}
           </Typography>
           <Typography variant="h5" component="h2">
             {name}

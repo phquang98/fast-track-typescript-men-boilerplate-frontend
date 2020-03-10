@@ -15,6 +15,12 @@ FINISH:
 
 - da xong tam thoi min routing, su dung Link compo cua react router chu khong dung cua material ui
 - chua compo trong `components` folders, roi dung trong `pages` folders
+- Google Sign in button:
+  - client ID: 903071779533-b9om8er3acdvuh5kea67qa264vc915ut.apps.googleusercontent.com
+    - URL used here is: http://localhost:3000/api/v1/admin/products
+  - client secret: hkooN2uz4gu_7PLH7tJTtmxD
+- dang lam do copy cac link html va tao nut google bang react google signin
+- thanh cong access duoc vao cai response tra ve tu Gooogle Id
 
 TODO:
 
@@ -42,6 +48,13 @@ TODO:
 - set `core.autocrlf true` as when commit, files will have LF but when in your machine will be CRLF
 - settings for import resolver must use all file format, including .js, .ts and .tsx
 - if use Typography, if has `component="h2"` -> DOM tree will be rendered with that as a h2 ele
+- when create client ID token for frontend, choose WEB BROWSER, not WEB SERVER
+- when run frontend, use different port from backend, in Wins must add `PORT=port_here &&`
+- js dont have arrray type -> when typeof array, it print out obj
+- if writing type guards with arrays of 2 types, write like this: `(ProductType | undefined)[]`, do not write like this `(ProductType[] | undefined[])`
+- know that there is a thing called ES6 Object Shorthand Notation, when write `return {productAll}`, it just means that it is `return {productAll: productAll}`
+- conditional rendering: instead of `if(productAl.length !== 0)`, you can `return (productAll && productAll.....)`
+- when creating types, types props must exactly like the name of the data, for example data `_id, name, age` -> type must have `_id, name, age`
 
 ## Links
 

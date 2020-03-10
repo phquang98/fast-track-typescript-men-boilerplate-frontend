@@ -3,6 +3,7 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import { AppBar, Toolbar } from "@material-ui/core";
 import { BrowserRouter, Switch, Route, Link as LogicLink } from "react-router-dom";
 
+import dotenv from "dotenv";
 import "./App.css";
 import Product from "./pages/Product";
 import User from "./pages/User";
@@ -27,6 +28,8 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 const App: FC = () => {
+  dotenv.config();
+
   const classes = useStyles();
 
   const userId = 123456789;
