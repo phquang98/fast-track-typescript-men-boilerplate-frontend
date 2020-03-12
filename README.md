@@ -52,11 +52,14 @@ TODO:
 - when run frontend, use different port from backend, in Wins must add `PORT=port_here &&`
 - js dont have arrray type -> when typeof array, it print out obj
 - if writing type guards with arrays of 2 types, write like this: `(ProductType | undefined)[]`, do not write like this `(ProductType[] | undefined[])`
-- know that there is a thing called ES6 Object Shorthand Notation, when write `return {productAll}`, it just means that it is `return {productAll: productAll}`
+- know that there is a thing called ES6 Object Shorthand Notation, when write `return {productAll}`, it just means that it is `return {productAll: productAll}` -> know understand why when des ass must have exactly same name, because it is accessing the FUCKING prop of the obj, of course it must be exactly the same
 - conditional rendering: instead of `if(productAl.length !== 0)`, you can `return (productAll && productAll.....)`
 - when creating types, types props must exactly like the name of the data, for example data `_id, name, age` -> type must have `_id, name, age`
+- if use MongoDB and mongoose auto generate \_id, remember that \_id is a string, not a number
+- dont understand why Promise must have generic as `void` not `undefined`
 
 ## Links
 
 - <https://www.sitepoint.com/react-with-typescript-best-practices/>
 - <https://fettblog.eu/typescript-react/>
+- <https://blog.bitsrc.io/must-know-concepts-of-react-router-fb9c8cc3c12>

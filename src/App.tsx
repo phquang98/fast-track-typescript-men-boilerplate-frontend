@@ -8,6 +8,7 @@ import "./App.css";
 import Product from "./pages/Product";
 import User from "./pages/User";
 import Admin from "./pages/Admin";
+import OneProduct from "./pages/OneProduct";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -58,6 +59,7 @@ const App: FC = () => {
           <Route path="/api/v1/products/all" component={Product} />
           <Route path="/api/v1/admin/products" component={Admin} />
           <Route path={`/api/v1/user/user/${userId}`} component={User} />
+          <Route path={`/api/v1/products/product_id_here`} component={OneProduct} />
         </Switch>
       </BrowserRouter>
     </div>

@@ -14,7 +14,7 @@ export type NavBarProp = {
 // Model types
 
 export type ProductType = {
-  _id: number;
+  _id: string;
   name: string;
   description: string;
   categories: string[];
@@ -26,6 +26,9 @@ export type responseFromGoogleType = (arg: GoogleLoginResponse | GoogleLoginResp
 
 // Hook types
 
-export type useProductAllType = () => {
+export type useProductType = (
+  arg1: string
+) => {
   productAll: ProductType[] | undefined;
+  product: ProductType | undefined;
 };

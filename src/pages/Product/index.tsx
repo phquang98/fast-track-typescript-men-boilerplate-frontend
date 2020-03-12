@@ -5,19 +5,17 @@ import { Grid } from "@material-ui/core";
 import { ProductType } from "../../types/personalType";
 import ProductCard from "../../components/ProductCard";
 // import fakeData from "../../hooks/fakeData.json";
-import { useProductAll } from "../../hooks/useBackend";
+import { useProduct } from "../../hooks/useBackend";
 
 // Type guard when fetching data
-// function isProductType(arg: (ProductType | undefined)[]): arg is ProductType[] {
-//   return (arg as ProductType[]) !== undefined;
-// }
-
 function isProductType(arg: ProductType[] | undefined): arg is ProductType[] {
   return (arg as ProductType[]) !== undefined;
 }
 
 const ProductPage: FC<void> = () => {
-  const { productAll } = useProductAll();
+  const { productAll, product } = useProduct("5e5e18079c7600def684431f");
+  console.log("day la");
+  console.log(product);
 
   if (isProductType(productAll)) {
     return (
